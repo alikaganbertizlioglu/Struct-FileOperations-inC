@@ -36,7 +36,6 @@ float average_release_year(RECORD records){
 }
 
 
-//BOZUKKOD
 RECORD find_top_ten_films(RECORD records) {
     RECORD toptenFilm = (RECORD) malloc(sizeof(RECORD_t) * 10);
     for (int j = 0; j < 1000; ++j) {
@@ -75,8 +74,7 @@ RECORD find_ten_affordable_films(RECORD records){
 }
 
 int main() {
-    // *****************************************************
-    // *************** DO NOT EDIT THIS PART ***************
+   
     RECORD records = (RECORD)malloc(sizeof(RECORD_t) * MAX);
     FILE *file = fopen("records.txt", "rb");
     if (file == NULL) {
@@ -85,8 +83,7 @@ int main() {
     }
     fread(records, sizeof(RECORD_t) * MAX, 1, file);
     fclose(file);
-    // *****************************************************
-    // *****************************************************
+    
     printf("Average Rental Rate: %f\n", average_rental_rate(records));
     printf("Average Release Year: %f\n", average_release_year(records));
 
